@@ -40,8 +40,8 @@ namespace :deploy do
   desc "Setup shared directory."
   task :setup_shared do
     run "mkdir #{shared_path}/config"
-    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
-    put File.read("config/private.example.yml"), "#{shared_path}/config/private.yml"
+    put File.read("config/database.yml"), "#{shared_path}/config/database.yml"
+    put File.read("config/private.yml"), "#{shared_path}/config/private.yml"
     puts "Now edit the config files in #{shared_path}."
   end
 
